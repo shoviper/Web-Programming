@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>CV Form</title>
+    </head>
+    <body>
+        <table cellspacing="10" cellpadding="5" style="width: 100%; margin: 0">
+        <colgroup>
+            <col width="30%">
+            <col width="70%">
+        </colgroup>
+    <tr>
+        <form>
+            <td rowspan="8" style="text-align: center;">
+                <img src="winter.jpg" alt="Picture" width="300" height="300">
+                <br>
+                <br>
+                <br>
+                <hr style="margin:0;">
+                <label for = "profile"><strong>Profile:</strong></label>
+                <br>
+                <textarea id="profile" name="profile" rows="4" style="width: 100%;" required></textarea>
+            </td>
+            <td>
+                <strong>Personal Information:</strong>
+                <hr style="margin:0;">
+            </td>
+        </form>
+    </tr>
+    <tr>
+        <td>
+            <label for = "name"><strong>Name:</strong></label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="text" id="name" name="name" placeholder="John Doe" style="width: 100%;" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for = "age"><strong>Age:</strong></label>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="range" id="age" name="age" min="0" max="100" required>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <label for = "email"><strong>Email:</strong></label>
+        </td>
+    </tr>
+    <tr>
+        <td><input type="email" id="email" name="email" placeholder="myEmail@gmail.com" style="width: 100%;" required></td>
+    </tr>
+    <tr>
+        <td><strong>Phone:</strong></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><input type="tel" id="phone" name="phone" required placeholder="092-345-6789" style="width: 100%;"></td>
+    </tr>
+                    
+        </table>
+        
+        
+    </body>
+</html>

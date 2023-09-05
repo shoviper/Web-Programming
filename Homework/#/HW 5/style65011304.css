@@ -1,0 +1,93 @@
+html {
+    background-color: aquamarine;
+}
+body {
+    font-family: Arial;
+    margin: 0 auto;
+    padding: 0;
+    max-width: 1080px;
+}
+h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 24px;
+}
+h1, h2, h3, p {
+    margin-left: 20px;
+}
+p {
+    line-height: 1.7;
+}
+.semester p {
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+
+.main {
+    border: 0%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(218, 249, 255); 
+}
+.main img {
+    width: 95%;      
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    max-width: 100%;
+}
+
+
+.course {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-left: 10px;
+}
+.semester {
+    width: 100%;
+    padding: 10px;
+    border: 0px solid #ffffff;
+    background-color: rgb(218, 249, 255);
+}
+.subject {
+    border: 1px solid #000000;
+    padding: 10px 0;
+    margin: 0;
+}
+.subjectname {
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+
+@media screen and (min-width: 480px) {
+    body {
+        width: auto;
+    }
+    h1, h2, h3, p {
+        width: 95%;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 750px) {
+    .course {
+        flex-direction: column;
+    }
+
+    .semester {
+        margin-bottom: 30px;
+        width: 95%;
+    }
+
+    .subject {
+        margin-left: 0;
+    }
+}
