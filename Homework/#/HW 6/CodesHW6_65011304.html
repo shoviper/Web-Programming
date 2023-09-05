@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Calendar 2023</title>
+        <style>
+            html {
+                font-size: 20px;
+            }
+            table {
+                border-collapse: collapse;
+                border: 1px solid black;
+                margin: auto;
+                margin-top: 250px;
+            }
+            th {
+                border: 1px solid black;
+                width: 80px;
+                height: 30px;
+            }
+            td {
+                border: 1px solid black;
+                text-align: center;
+                height: 30px;
+            }
+            th button {
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                background-color: salmon;
+            }
+        </style>
+    </head>
+    <body>
+        <table id = "table">
+            <thead>
+                <tr>
+                    <th colspan="1">
+                        <button onclick = "previous()"><</button>
+                    </th>
+                    <th colspan="5" id="month"></th>
+                    <th colspan="1">
+                        <button onclick = "next()">></button>
+                    </th>
+                </tr>
+                <tr id = "sevendays"></tr>
+            </thead>
+            <tbody id = "main">
+            </tbody>
+        </table>
+        <script type = "text/javascript" src = "functions65011304.js"> </script>
+    </body>
+</html>
