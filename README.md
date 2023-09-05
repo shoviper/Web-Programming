@@ -1,1 +1,1 @@
-# Containing all files about Web-Programming class.
+# Containing all files that are in the Web-Programming class.
