@@ -9,7 +9,6 @@ function create7days() {
         headcell.textContent = name[i];
         sevendays.appendChild(th);
     }
-
 }
 
 function show_monthOf2023(m_of_year) {
