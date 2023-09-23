@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Timer</title>
+    <style>
+        table, th, tr, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Online Timer</h1>
+    <h3>Current Time (1000x faster): <span id="realtime"></span></h3>
+    <p>
+        <button id="button">Edit</button>
+    </p>
+    <table id="table">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Alert Word</th>
+            </tr>
+        </thead>
+        <tr id="time"></tr>
+        <tr id="text"></tr>
+    </table>
+    <script type="text/javascript" src="2.js"></script>
+</body>
+</html>

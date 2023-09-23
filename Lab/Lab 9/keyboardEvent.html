@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Keyboard Event Handling</title>
+</head>
+<body>
+  <p id="output"></p>
+
+  <script>
+    const output = document.getElementById('output');
+    // Keyup event handler
+    document.addEventListener('keyup', (event) => {
+      output.innerHTML = `Keyup: Key code: ${event.keyCode}, Key: ${event.key}`;
+    });
+    // Keypress event handler
+    document.addEventListener('keypress', (event) => {
+      output.innerHTML = `Keypress: Char code: ${event.charCode}, Char: ${String.fromCharCode(event.charCode)}`;
+    });
+  </script>
+</body>
+</html>
