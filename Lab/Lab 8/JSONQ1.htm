@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Bill</title>
+    <link rel="stylesheet" type="text/css" href="JSONLabBill.css">
+    <script src="JSONLabBill.js"></script>
+</head>
+<body>
+    <table border="1" align="center" id="originalTable">
+        <tbody>
+            <tr class="header">
+                <th>Number</th>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Amount</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Item 1</td>
+                <td>1</td>
+                <td>100</td>
+                <td>100</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Item 2</td>
+                <td>2</td>
+                <td>200</td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Item 3</td>
+                <td>3</td>
+                <td>300</td>
+                <td>900</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Item 4</td>
+                <td>4</td>
+                <td>400</td>
+                <td>1600</td>
+            </tr>
+            <tr class="footer">
+                <td colspan="4">Total</td>
+                <td>3000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div style="text-align: center; margin-top: 2%;">
+        <textarea rows="10" cols="50" id="displayTextarea" placeholder="Your JSON Here"></textarea>
+    </div>
+    
+
+    <div class="button" style="text-align: center; margin-top: 1%; margin-bottom: 1%;">
+        <!-- change later -->
+        <button onclick="convert()">Convert</button>
+    </div>
+
+    <table border="1" align="center" id="newTable">
+
+    </table>
+    <script>
+        let tablegenerate = false;
+
+        function convert() {
+            if (!tablegenerate) {
+                const table = document.getElementById("originalTable");
+                const rows = table.rows;
+                const headerrow = document.querySelector(".header");
+                const footerrow = document.querySelector(".footer");
+                
+                const header = [];
+                for (const cell of headerrow.cells) {
+                    const output = cell.textContent;
+                    header.push(output);
+                }
+                
+                const body = [];
+                for (let i = 1; i < rows.length - 1; i++) {
+                    const rowdata = {};
+                    const cells = rows[i].cells;
+                    for (let j = 0; j < cells.length; j++) {
+                        rowdata[header[j]] = cells[j].textContent;
+                    }
+                    body.push(rowdata);
+                }
+                
+                const footer = [{ value: "Total", colspan: 4 },{ value: 3000 }];
+
+                const jsondata = {
+                    Header: header,
+                    Body: body,
+                    Footer: footer
+                };
+        
+                const jsonTextArea = document.getElementById("displayTextarea");
+                jsonTextArea.value = JSON.stringify(jsondata, null, 2);
+                tablegenerate = true;
+            } else {
+                generatenewtable();
+            }
+        }
+
+        function generatenewtable() {
+            const newtable = document.getElementById("newTable");
+            const jsonTextArea = document.getElementById("displayTextarea");
+            const newjsondata = JSON.parse(jsonTextArea.value);
+            const newheader = newjsondata.Header;
+            const newbody = newjsondata.Body;
+            const newfooter = newjsondata.Footer;
+
+            const newheaderrow = document.createElement("tr");
+            for (const newheadercell of newheader) {
+                const cell = document.createElement("th");
+                cell.textContent = newheadercell;
+                newheaderrow.appendChild(cell);
+            }
+            newtable.appendChild(newheaderrow);
+
+            for (const newdatarow of newbody) {
+                const row = document.createElement("tr");
+                for (const newheadercell of newheader) {
+                    const cell = document.createElement("td");
+                    cell.textContent = newdatarow[newheadercell];
+                    row.appendChild(cell);
+                }
+                newtable.appendChild(row);
+            }
+
+            const newfooterrow = document.createElement("tr");
+            for (const footerItem of newfooter) {
+                const newfootercell = document.createElement("td");
+                newfootercell.textContent = footerItem.value;
+                if (footerItem.colspan) {
+                    newfootercell.colSpan = footerItem.colspan;
+                }
+                newfooterrow.appendChild(newfootercell);
+            }
+            newtable.appendChild(newfooterrow);
+        }
+
+
+    </script> 
+</body>
+</html>

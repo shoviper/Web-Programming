@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "utf-8" name = "viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Resume</title>
+        <script src = "http://161.246.5.61/Lab.js"></script>
+        <link rel="stylesheet" type = "text/css" href="1.css">
+    </head>
+    <body>
+        <div class="table">
+            <div class="col30">
+                <div class="profile">
+                    <img src="winter.jpg" alt="Picture" width="200" height="200">
+                    <br>
+                    <br>
+                    <br>
+                    <hr>
+                    <label for="profile"><strong>Profile:</strong></label>
+                    <br>
+                    <textarea id="profile" name="profile" rows="4" required></textarea>
+                </div>
+                <div class="address">
+                    <label for="address"><strong>Address:</strong></label>
+                    <hr>
+                    <input type="text" id="street" placeholder="Maple Street" required>
+                    <br>
+                    <br>
+                    <br>
+                    <input type="text" id="city" placeholder="California" required>
+                    <br>
+                    <br>
+                    <br>
+                    <select id="country" name="country" required>
+                        <option value="">Select a country</option>
+                    </select>
+                    <script>
+                        populateCountries();
+                    </script>
+                </div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <div class="contact">
+                    <label for="contact"><strong>Contacts:</strong></label>
+                    <hr>
+                    <label for="reference"><strong>Reference:</strong></label>
+                    <br>
+                    <br>
+                    <br>
+                    <textarea id="ref" name="ref" rows="4" required></textarea>
+                    <br>
+                    <br>
+                    <label for="col"><strong>Favorite Colour:</strong></label>
+                    <br>
+                    <br>
+                    <input type="color" id="favColour" required>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="button">
+                        <input type="submit" value="Submit" onclick="displayResume()" class="submit-btn">
+                    </div>
+                </div>
+            </div>
+            <div class="col70">
+                <div class="personalinfo">
+                    <label for="personalinfo"><strong>Personal Information:</strong></label>
+                    <hr>
+                    <label for="name"><strong>Name:</strong></label>
+                    <br>
+                    <br>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    <br>
+                    <br>
+                    <label for="age"><strong>Age:</strong></label>
+                    <br>
+                    <br>
+                    <input type="range" id="age" name="age" min="0" max="100" required onchange="updateAgeValue()">
+                    <span id="ageValue">0</span>
+                    <script>
+                        updateAgeValue();
+                    </script>
+                    <br>
+                    <br>
+                    <label for="email"><strong>Email:</strong></label>
+                    <br>
+                    <br>
+                    <input type="email" id="email" name="email" placeholder="myEmail@gmail.com" required>
+                    <br>
+                    <br>
+                    <label for="phone"><strong>Phone:</strong></label>
+                    <br>
+                    <br>
+                    <input type="tel" id="phone" name="phone" placeholder="092-345-6789" required>
+                </div>
+                <div class="education">
+                    <label for="education"><strong>Education:</strong></label>
+                    <hr>
+                    <label for="university"><strong>University:</strong></label>
+                    <br>
+                    <br>
+                    <input type="text" id="university" placeholder="KMITL" required>
+                    <br>
+                    <br>
+                    <label for="degree"><strong>Degree:</strong></label>
+                    <br>
+                    <br>
+                    <input type="text" id="degree" placeholder="Software Engineering" required>
+                    <br>
+                    <br>
+                    <label for="year"><strong>Year of Graduation:</strong></label>
+                    <br>
+                    <br>
+                    <input type="date" id="graduationYear" required>
+                </div>
+                <div class="skill">
+                    <label for="skills"><strong>Skills:</strong></label>
+                    <br>
+                    <br>
+                    <textarea id="skills" name="skills" rows="4" required></textarea>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

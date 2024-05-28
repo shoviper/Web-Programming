@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Timer</title>
+        <style>
+            * {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Online Timer</h1>
+        <h3 id="txt"></h3>
+        <p>
+            Select date: 
+            <input onchange="select_date()" type="date" id="date">
+        </p>
+        <div id="main">
+            <table id="info" border="1" style="border-collapse: collapse; margin: 0 auto;">
+                <tr>
+                    <td>Time</td>
+                    <td>Alert Word</td>
+                </tr>
+            </table>
+        </div>
+        <p>
+            <button onclick="edit()" id="kuypun">edit</button>
+        </p>
+        <p>
+            <button onclick="export_()" id="export_btn">export</button>
+        </p>
+        <p>
+            <button onclick="import_()" id="import_btn">import</button>
+        </p>
+        <p>
+            <button onclick="save()" id="save">Save Schedule</button>
+        </p>
+        <script src="test1.js"></script>
+    </body>
+</html>

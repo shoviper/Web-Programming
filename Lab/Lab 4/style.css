@@ -1,0 +1,123 @@
+.table {
+    border: 0%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    display: flex;
+    flex-direction: row;
+    background-color: aquamarine; 
+}
+
+.col30 {
+    width: 30%;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.col70 {
+    width: 70%;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.profile {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(34, 136, 219);
+    text-align: center;
+    padding: 20px;
+}
+
+.profile:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.profile img {
+    border-radius: 50%;
+}
+
+.profile textarea {
+    width: 100%;
+}
+
+.address {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(34, 136, 219);
+    text-align: left;
+    padding: 20px;
+}
+
+.address:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.address input {
+    width: 80%;
+}
+
+.address select {
+    width: 82%;
+}
+
+.contact {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(34, 136, 219);
+    text-align: left;
+    padding: 20px;
+}
+
+.contact:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.contact textarea {
+    width: 100%;
+}
+
+.button {
+    background-color: rgb(34, 136, 219);
+}
+
+.personalinfo {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(202, 220, 83);
+    text-align: left;
+    padding: 20px;
+}
+
+.personalinfo:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.personalinfo input{
+    width: 80%;
+}
+
+.education {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(18, 181, 10);
+    text-align: left;
+    padding: 20px;
+}
+
+.education input{
+    width: 80%;
+}
+
+.education:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.skill {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgb(121, 124, 119);
+    text-align: left;
+    padding: 20px; 
+}
+
+.skill:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.skill textarea {
+    width: 80%;
+}
